@@ -1,0 +1,39 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url('../fonts/#{$url}.woff2') format("woff2");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin padding-y($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+
+}
+
+@mixin padding-x($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin base-hover($bg-color, $time: 0.2s) {
+  transition: all $time ease-out;
+
+  &:hover {
+    background: $bg-color;
+  }
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+
