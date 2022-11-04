@@ -1,0 +1,12 @@
+.form-button {
+  @include padding-y(1rem);
+
+  @extend %not-confine;
+
+  color: $white-color;
+  font-weight: 400;
+  font-size: 2.2rem;
+  background: $accent-color;
+  cursor: pointer;
+  transition: 0.2s;
+}

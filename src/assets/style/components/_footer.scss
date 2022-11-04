@@ -1,0 +1,88 @@
+/* ------------------- footer ------------------- */
+
+.footer {
+  position: relative;
+  padding: 6rem 0;
+  color: $main-beige;
+  background-color: $main-black;
+}
+
+.footer-box {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+/* ------------------- footer logo ------------------- */
+
+.footer__logo {
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------- social ------------------- */
+.footer__subtitle {
+  margin-bottom: 2.3rem;
+  font-size: 3rem;
+  font-family: $font-family-Rodchenko;
+  line-height: 130%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-social__list {
+  @extend %display-classic;
+
+  .footer-social__item {
+    margin-right: 2.3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .footer-social__icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      transition: 0.2s;
+
+      &:hover {
+        box-shadow: 0 0 4px  rgb(255 255 255 / 60%);
+      }
+    }
+  }
+}
+
+/* ------------------- .footer-works ------------------- */
+
+.footer-contacts,
+.footer-works,
+.footer-social {
+  flex: 0 0 31.33%;
+}
+
+.footer-works__working-box,
+.footer-works__non-working-box,
+.footer-box__opening-text-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.opening__text {
+  text-align: right;
+}
+
+.road-link {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  padding: 2rem 6rem 5rem 3rem;
+
+  &__svg {
+    width: inherit;
+    height: inherit;
+  }
+}

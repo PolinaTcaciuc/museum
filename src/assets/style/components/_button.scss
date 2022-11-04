@@ -1,0 +1,15 @@
+.button {
+  display: inline-block;
+  min-width: 30rem;
+  max-width: 38rem;
+  min-height: 6rem;
+  padding: 2rem;
+  color: $white-color;
+  font-weight: 400;
+  font-size: 2.2rem;
+  font-family: $font-family--page;
+  line-height: 130%;
+  text-align: center;
+  background-color: $accent-color;
+  cursor: pointer;
+}

@@ -1,11 +1,110 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музей конструктивизма</title>
-</head>
-<body>
-</body>
-</html>
+@@include('../src/assets/templates/head.html')
+@@include('../src/assets/templates/header.html')
+
+<div class="wrapper">
+  <!-- main -->
+  <main class="main">
+    <!-- promo -->
+    <section class="promo">
+        <div class="promo-container container">
+            <div class="promo__info">
+                <h1 class="promo__title title">Эпоха конструктивизма и константы будущего </h1>
+                <p class="promo__date">20 июня 2022 - 10 августа 2022</p>
+                <a href="#" class="promo__button button">купить билеты</a>
+                <p class="promo__description">В музее пройдёт фестиваль «Эпоха конструктивизма и константы
+                    будущего», вновь организованный Советом депутатов и Администрацией МО Хамовники, который
+                    продолжит рассказывать о мире конструктивизма. </p>
+            </div>
+            <!-- promo slider-->
+            <div class="promo__slider">
+                <div class="promo__slider-line">
+                    <img class="promo__item" src="./assets/images/promo-bg.png" alt="Шаболовка фото">
+                    <img loading="lazy" class="promo__item" src="./assets/images/promo-bg.png" alt="Шаболовка фото">
+                    <img loading="lazy" class="promo__item" src="./assets/images/promo-bg.png" alt="Шаболовка фото">
+                    <img loading="lazy" class="promo__item" src="./assets/images/promo-bg.png" alt="Шаболовка фото">
+                    <img loading="lazy" class="promo__item" src="./assets/images/promo-bg.png" alt="Шаболовка фото">
+                    <img loading="lazy" class="promo__item" src="./assets/images/promo-bg.png" alt="Шаболовка фото">
+                </div>
+                <div class="promo__slider-controls">
+                    <!-- arrow prev  -->
+                    <button class="promo__slider-arrow promo__slider-arrow--prev">
+                        <img src="./assets/images/arrow-slider.svg" alt="указатель назад">
+                    </button>
+                    <!-- numbers box -->
+                    <div class="promo__numbers-box">
+                        <span class="promo__number-from"></span>
+                        <span class="promo__slider-slash">/</span>
+                        <span class="promo__number-total"></span>
+                    </div>
+                    <!--  arrow next -->
+                    <button class="promo__slider-arrow promo__slider-arrow--next">
+                        <img src="./assets/images/arrow-slider.svg" alt="указатель вперед">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- exhibition-->
+    <section class="exhibition" id="exhibition-anchor">
+        <div class="container">
+            <h2 class="exhibition__title title">Выставки на ближайшее время</h2>
+            <div class="exhibition-box">
+                <article class="exhibition-card">
+                    <img class="exhibition-card__image" loading="lazy" src="./assets/images/tatlin-tower.jpg" alt="башня татлина">
+                    <div class="exhibition-card__info">
+                        <h3 class="exhibition-card__title title">башня татлина</h3>
+                        <p class="exhibition-card__date">12 июня 2022 - 30 июня 2022</p>
+                        <p class="exhibition-card__description">
+                            Проект монументального памятника, посвящённого III Интернационалу, которому так
+                            и не было суждено не воплотиться в жизнь.
+                        </p>
+                        <div class="change-page exhibition-card__change-page change-page--no-active">
+                            <a href="./error.html" class="change-page__link">
+                                <svg class="change-page__svg">
+                                    <use xlink:href='./assets/images/sprite/sprite.svg#arrow-link'></use>
+                                </svg>
+                                <span class="change-page__text">подробнее</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+               <article class="exhibition-card">
+                    <img class="exhibition-card__image" loading="lazy" src="./assets/images/shabolovka-small.jpg" alt="башня татлина">
+                    <div class="exhibition-card__info">
+                        <h3 class="exhibition-card__title title">шаболовка: временная архитектура</h3>
+                        <p class="exhibition-card__date">12 июня 2022 - 30 июня 2022</p>
+                        <p class="exhibition-card__description">
+                            Выставка итоговых проектов интенсивного архитектурного курса Высшей школы
+                            урбанистики НИУ ВШЭ (г. Москва).
+                        </p>
+                        <div class="change-page exhibition-card__change-page change-page--active">
+                            <a href="./event.html" class="change-page__link">
+                                <svg class="change-page__svg">
+                                    <use xlink:href='./assets/images/sprite/sprite.svg#arrow-link'></use>
+                                </svg>
+                                <span class="change-page__text">подробнее</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <a href="./index.html#exhibition-anchor" class="exhibition__button button">все экскурсии</a>
+        </div>
+    </section>
+    <!-- subscription-->
+    <section class="subscription" id="subscription-anchor">
+        <div class="container subscription__container">
+            <div class="subscription__wrapper">
+                <h2 class="subscription__title title">Подпишитесь на рассылку</h2>
+                <p class="subscription__text">Укажите электронную почту и узнавайте о новых выставках первыми
+                </p>
+                <form action="#" method="#" enctype="#" class="subscription__form">
+                    <input class="subscription__form-input base-input" type="email" name="subscription_person-mail" maxlength="50" required placeholder="введите ваш e-mail">
+                    <button class="subscription__form-button form-button" type="submit">подписаться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+</div>
+@@include('../src/assets/templates/footer.html')

@@ -99,7 +99,7 @@ function imagesCompress() {
 
 /* ------------------- svg sprites ------------------- */
 const svgSprites = () => {
-	return src('./src/assets/images/svg/**/*.svg', )
+	return src('./src/assets/images/icons/**/*.svg', )
 		.pipe(svgSprite({
 			mode: {
 				stack: {
@@ -194,7 +194,7 @@ const watching = () => {
 		server: "./dist"
 
 	});
-	watch('./src/assets/style/**/*.scss',styles);
+	watch('./src/assets/style/**/*.scss', styles);
 	watch('./src/**/*.html', htmlInclude);
 	watch('./src/assets/images/**/*.jpg', imgagesDev);
 	watch('./src/assets/images/**/*.png', imgagesDev);
@@ -207,5 +207,5 @@ const watching = () => {
 
 exports.styles = styles;
 exports.watching = watching;
-exports.default = series(cleanDist,htmlInclude,fonts,styles,imgagesDev,svgSprites,htmlInclude,scripts,watching);
+exports.default = series(cleanDist, htmlInclude, fonts, styles, imgagesDev, svgSprites, htmlInclude, scripts, watching);
 // exports.build = series(cleanDist, parallel(htmlInclude, html,scriptsBuild, fonts, imgagesDev), styles, imagesCompress);
